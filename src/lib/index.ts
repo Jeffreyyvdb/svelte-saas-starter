@@ -1,4 +1,3 @@
-// place files you want to import through the `$lib` alias in this folder.
 import { type Icons } from './components/shared/icons';
 
 export type SiteConfig = {
@@ -22,8 +21,19 @@ export type NavItem = {
 	icon?: keyof typeof Icons;
 };
 
+export type MainNavItem = NavItem;
+
+export type MarketingConfig = {
+	mainNav: MainNavItem[];
+};
+
 export type SidebarNavItem = {
 	title: string;
 	items: NavItem[];
 	icon?: keyof typeof Icons;
+};
+
+export type DocsConfig = {
+	mainNav: MainNavItem[];
+	sidebarNav: SidebarNavItem[];
 };
