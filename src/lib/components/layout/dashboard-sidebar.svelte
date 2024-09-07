@@ -8,6 +8,7 @@
 	import { Button } from '../ui/button';
 	import { PanelLeftClose, PanelRightClose } from 'lucide-svelte';
 	import { Badge } from '../ui/badge';
+	import ProjectSwitcher from '../dashboard/project-switcher.svelte';
 
 	interface DashboardSidebarProps {
 		links: SidebarNavItem[];
@@ -18,7 +19,6 @@
 	const screenInfo = useMediaQuery(browser);
 
 	const path = $page.url.href;
-
 
 	let isSidebarExpanded = $state($screenInfo.isTablet);
 
@@ -37,7 +37,7 @@
 			<div class="flex h-full max-h-screen flex-1 flex-col gap-2">
 				<div class="flex h-14 items-center p-4 lg:h-[60px]">
 					{#if isSidebarExpanded}
-						<!-- <ProjectSwitcher></ProjectSwitcher> -->
+						<ProjectSwitcher/>
 					{/if}
 					<Button
 						variant="ghost"

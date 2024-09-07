@@ -11,6 +11,7 @@
 	import { cn, getIcon } from '$lib/utils';
 	import { Badge } from '../ui/badge';
 	import { page } from '$app/stores';
+	import ProjectSwitcher from '../dashboard/project-switcher.svelte';
 
 	interface MobileSheetSidebarProps {
 		links: SidebarNavItem[];
@@ -47,7 +48,7 @@
 								{siteConfig.name}
 							</span>
 						</a>
-						<!-- <ProjectSwitcher large /> -->
+						<ProjectSwitcher large />
 						{#each links as section}
 							<section class="flex flex-col gap-0.5">
 								<p class="text-xs text-muted-foreground">
