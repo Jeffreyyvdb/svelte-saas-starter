@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SearchCommand from '$lib/components/dashboard/search-command.svelte';
 	import DashboardSidebar from '$lib/components/layout/dashboard-sidebar.svelte';
 	import MobileSheetSidebar from '$lib/components/layout/mobile-sheet-sidebar.svelte';
 	import MaxWidthWrapper from '$lib/components/shared/max-width-wrapper.svelte';
@@ -15,7 +16,7 @@
 			<MaxWidthWrapper class="flex max-w-7xl items-center gap-x-3 px-0">
 				<MobileSheetSidebar links={sidebarLinks} />
 				<div class="w-full flex-1">
-					<!-- <SearchCommand links={filteredLinks} /> -->
+					<SearchCommand links={sidebarLinks} />
 				</div>
 
 				<ModeToggle />

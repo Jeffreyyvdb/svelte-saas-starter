@@ -21,9 +21,6 @@
 	const path = $page.url.href;
 
 	let isSidebarExpanded = $state($screenInfo.isTablet);
-
-	$inspect(isSidebarExpanded);
-	$inspect(links);
 </script>
 
 <div class="sticky top-0 h-full">
@@ -37,7 +34,7 @@
 			<div class="flex h-full max-h-screen flex-1 flex-col gap-2">
 				<div class="flex h-14 items-center p-4 lg:h-[60px]">
 					{#if isSidebarExpanded}
-						<ProjectSwitcher/>
+						<ProjectSwitcher />
 					{/if}
 					<Button
 						variant="ghost"

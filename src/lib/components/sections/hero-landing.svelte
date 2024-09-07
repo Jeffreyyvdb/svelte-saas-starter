@@ -14,7 +14,7 @@
 		>
 			<span class="mr-3">🎉</span>
 			<span class="hidden md:flex">Introducing&nbsp;</span> Next Auth Roles Template on <Icons.twitter
-				className="ml-2 size-3.5"
+				class="ml-2 size-3.5"
 			/>
 		</a>
 
@@ -35,7 +35,7 @@
 		<div class="flex justify-center space-x-2 md:space-x-4">
 			<a href="/pricing" class={cn(buttonVariants({ size: 'lg' }), 'gap-2 rounded-full')}>
 				<span>Go Pricing</span>
-				<Icons.arrowRight className="size-4" /></a
+				<Icons.arrowRight class="size-4" /></a
 			>
 			<a
 				href={siteConfig.links.github}
