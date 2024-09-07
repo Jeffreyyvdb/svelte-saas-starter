@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SearchCommand from '$lib/components/dashboard/search-command.svelte';
+	import UserAccountNav from '$lib/components/dashboard/user-account-nav.svelte';
 	import DashboardSidebar from '$lib/components/layout/dashboard-sidebar.svelte';
 	import MobileSheetSidebar from '$lib/components/layout/mobile-sheet-sidebar.svelte';
 	import MaxWidthWrapper from '$lib/components/shared/max-width-wrapper.svelte';
@@ -20,7 +21,7 @@
 				</div>
 
 				<ModeToggle />
-				<!-- <UserAccountNav /> -->
+				<UserAccountNav />
 			</MaxWidthWrapper>
 		</header>
 		<main class="flex-1 p-4 xl:px-8">

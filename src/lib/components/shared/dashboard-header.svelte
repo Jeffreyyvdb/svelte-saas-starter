@@ -2,10 +2,10 @@
 	interface DashboardHeaderProps {
 		heading: string;
 		text?: string;
-		children?: any;
+		children: any;
 	}
 
-	const { heading, text, children }: DashboardHeaderProps = $props();
+	const { heading, text, children = () => {} }: DashboardHeaderProps = $props();
 </script>
 
 <div class="flex items-center justify-between">
