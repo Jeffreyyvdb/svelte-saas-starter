@@ -29,8 +29,7 @@
 			</span>
 		</h1>
 		<p class=" max-w-2xl text-balance leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-			Build your next project using Next.js 14, Prisma, Neon, Auth.js v5, Resend, React Email,
-			Shadcn/ui, Stripe.
+			Build your next project using Svelte 5 & shadcn-svelte.
 		</p>
 
 		<div class="flex justify-center space-x-2 md:space-x-4">

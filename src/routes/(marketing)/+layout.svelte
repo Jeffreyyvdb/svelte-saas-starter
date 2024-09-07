@@ -6,7 +6,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<MobileNav />
-	<Navbar />
+	<Navbar scroll={true} />
 	<main class="flex-1">
 		<slot></slot>
 	</main>
