@@ -4,7 +4,7 @@ import { base } from '$app/paths';
 const site_url = base;
 
 export const siteConfig: SiteConfig = {
-	name: 'svelte-saas-starter',
+	name: 'Saas Starter',
 	description: 'Get your project off to an explosive start with SaaS Starter!',
 	url: site_url,
 	ogImage: `${site_url}/_static/og.jpg`,
@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
 		twitter: 'https://twitter.com/jeffreyyvdb',
 		github: 'https://github.com/jeffreyyvdb'
 	},
-	mailSupport: 'jeffrey.2001.2312@gmail.com'
+	mailSupport: ''
 };
 
 export const footerLinks: SidebarNavItem[] = [
