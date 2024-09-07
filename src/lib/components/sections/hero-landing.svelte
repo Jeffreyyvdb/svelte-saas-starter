@@ -33,7 +33,7 @@
 		</p>
 
 		<div class="flex justify-center space-x-2 md:space-x-4">
-			<a href="/pricing" class={cn(buttonVariants({ size: 'lg' }), 'gap-2 rounded-full')}>
+			<a href="/#" class={cn(buttonVariants({ size: 'lg' }), 'gap-2 rounded-full')}>
 				<span>Go Pricing</span>
 				<Icons.arrowRight class="size-4" /></a
 			>

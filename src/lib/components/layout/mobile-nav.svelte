@@ -46,7 +46,7 @@
 		{/each}
 
 		<li class="py-3">
-			<a href="/admin" class="flex w-full font-medium capitalize">Admin</a>
+			<a href="/#" class="flex w-full font-medium capitalize">Admin</a>
 		</li>
 
 		<li class="py-3">
@@ -57,7 +57,7 @@
 			<a href="/login" class="flex w-full font-medium capitalize">Login</a>
 		</li>
 		<li class="py-3">
-			<a href="/register" class="flex w-full font-medium capitalize">Sign Up</a>
+			<a href="/#" class="flex w-full font-medium capitalize">Sign Up</a>
 		</li>
 	</ul>
 

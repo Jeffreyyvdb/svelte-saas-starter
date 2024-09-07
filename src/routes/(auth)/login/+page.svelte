@@ -30,7 +30,7 @@
 		</div>
 		<UserAuthForm></UserAuthForm>
 		<p class="px-8 text-center text-sm text-muted-foreground">
-			<a href="/register" class="hover:text-brand underline underline-offset-4">
+			<a href="/#" class="hover:text-brand underline underline-offset-4">
 				Don't have an account? Sign up</a
 			>
 		</p>

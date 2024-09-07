@@ -53,7 +53,7 @@
 				<ul class="mb-14 mt-1 w-full text-muted-foreground" role="list">
 					<li class="rounded-lg text-foreground hover:bg-muted">
 						<a
-							href="/admin"
+							href="/#"
 							onclick={() => (open = false)}
 							class="flex w-full items-center gap-3 px-2.5 py-2"
 						>
@@ -117,7 +117,7 @@
 			</div>
 			<DropdownMenu.Separator />
 			<DropdownMenu.Item>
-				<a href="/admin" class="flex items-center space-x-2.5">
+				<a href="/#" class="flex items-center space-x-2.5">
 					<Lock class="size-4" />
 					<p class="text-sm">Admin</p>
 				</a>
