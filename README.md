@@ -1,10 +1,17 @@
-# create-svelte
+# Svelte 5 SaaS Starter Template
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This project is a port of the [Next.js SaaS Stripe Starter](https://next-saas-stripe-starter.vercel.app/) for Svelte 5, utilizing the power of SvelteKit and shadcn-svelte components. It provides a robust foundation for building modern, scalable SaaS applications with Svelte.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Svelte 5 & SvelteKit**: Leveraging the latest Svelte features for reactive and efficient web applications.
+- **shadcn-svelte Components**: A comprehensive set of accessible and customizable UI components.
+- **Stripe Integration**: Ready-to-use Stripe setup for handling payments and subscriptions.
+- **Authentication**: Secure user authentication system.
+- **Dashboard**: Pre-built dashboard layout for easy management and overview.
+- **Responsive Design**: Mobile-first approach ensuring great UX across all devices.
+- **TypeScript**: Full TypeScript support for enhanced developer experience and code quality.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
 
 ```bash
 # create a new project in the current directory
@@ -25,14 +32,14 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+## Acknowledgements
 
-To create a production version of your app:
+- [Next.js SaaS Stripe Starter](https://next-saas-stripe-starter.vercel.app/) for the original inspiration
+- [shadcn-svelte](https://www.shadcn-svelte.com/) for the excellent UI components
+- [SvelteKit](https://kit.svelte.dev/) for the powerful framework
 
-```bash
-npm run build
-```
+## Support
 
-You can preview the production build with `npm run preview`.
+If you find this project helpful, please consider giving it a star on GitHub and sharing it with others!
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+For issues, feature requests, or questions, please use the GitHub issues page.
