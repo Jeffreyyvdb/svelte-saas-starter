@@ -2,7 +2,7 @@
 	interface DashboardHeaderProps {
 		heading: string;
 		text?: string;
-		children: any;
+		children?: any;
 	}
 
 	const { heading, text, children = () => {} }: DashboardHeaderProps = $props();
