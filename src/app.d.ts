@@ -7,7 +7,13 @@ declare global {
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
+		namespace Superforms {
+			type Message = {
+				status: 'error' | 'success' | 'warning';
+				text: string;
+			};
+		}
 	}
 }
 
-export {};
+export { App };

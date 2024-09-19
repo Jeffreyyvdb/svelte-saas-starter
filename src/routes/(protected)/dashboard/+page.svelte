@@ -1,12 +1,19 @@
 <script lang="ts">
 	import DashboardHeader from '$lib/components/shared/dashboard-header.svelte';
-	import { Button } from '$lib/components/ui/button';
+	import OpinionatedForm from '$lib/components/forms/opinionated-form.svelte';
+
+	let { data } = $props();
 </script>
 
 <DashboardHeader
 	heading="Dashboard"
 	text={`Current Role : ADMIN — Change your role in settings.`}
 />
+
+<div class="flex gap-4">
+	<OpinionatedForm data={data.form} id="form1" class="flex-1" />
+	<OpinionatedForm data={data.form} id="form2" class="flex-1" />
+</div>
 
 <!-- <EmptyPlaceholder>
 	<EmptyPlaceholder.Icon name="post" />
