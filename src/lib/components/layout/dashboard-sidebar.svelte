@@ -5,10 +5,11 @@
 	import { useMediaQuery } from '$lib/stores';
 	import ScrollArea from '$lib/components/ui/scroll-area/scroll-area.svelte';
 	import { cn, getIcon } from '$lib/utils';
-	import { Button } from '../ui/button';
+	import { Button } from '$lib/components/ui/button';
 	import { PanelLeftClose, PanelRightClose } from 'lucide-svelte';
-	import { Badge } from '../ui/badge';
+	import { Badge } from '$lib/components/ui/badge';
 	import ProjectSwitcher from '../dashboard/project-switcher.svelte';
+	import * as Tooltip from '$lib/components/ui/tooltip';
 
 	interface DashboardSidebarProps {
 		links: SidebarNavItem[];
@@ -61,30 +62,57 @@
 							{/if}
 
 							{#each section.items as item}
-								{#if item.href && isSidebarExpanded}
-									<a
-										href={item.disabled ? '#' : item.href}
-										class={cn(
-											'flex items-center gap-3 rounded-md p-2 text-sm font-medium hover:bg-muted',
-											// Is this path correct?
-											path === item.href
-												? 'bg-muted'
-												: 'text-muted-foreground hover:text-accent-foreground',
-											item.disabled &&
-												'cursor-not-allowed opacity-80 hover:bg-transparent hover:text-muted-foreground'
-										)}
-									>
-										<!-- svelte-ignore svelte_component_deprecated -->
-										<svelte:component this={getIcon(item.icon) || 'arrowRight'} class="size-5" />
-										{item.title}
-										{#if item.badge}
-											<Badge
-												class="ml-auto flex size-5 shrink-0 items-center justify-center rounded-full"
-											>
-												{item.badge}
-											</Badge>
-										{/if}
-									</a>
+								{#if item.href}
+									{#if isSidebarExpanded}
+										<a
+											href={item.disabled ? '#' : item.href}
+											class={cn(
+												'flex items-center gap-3 rounded-md p-2 text-sm font-medium hover:bg-muted',
+												// Is this path correct?
+												path === item.href
+													? 'bg-muted'
+													: 'text-muted-foreground hover:text-accent-foreground',
+												item.disabled &&
+													'cursor-not-allowed opacity-80 hover:bg-transparent hover:text-muted-foreground'
+											)}
+										>
+											<!-- svelte-ignore svelte_component_deprecated -->
+											<svelte:component this={getIcon(item.icon) || 'arrowRight'} class="size-5" />
+											{item.title}
+											{#if item.badge}
+												<Badge
+													class="ml-auto flex size-5 shrink-0 items-center justify-center rounded-full"
+												>
+													{item.badge}
+												</Badge>
+											{/if}
+										</a>
+									{:else}
+										<Tooltip.Root>
+											<Tooltip.Trigger>
+												<a
+													href={item.disabled ? '#' : item.href}
+													class={cn(
+														'flex items-center gap-3 rounded-md py-2 text-sm font-medium hover:bg-muted',
+														path === item.href
+															? 'bg-muted'
+															: 'text-muted-foreground hover:text-accent-foreground',
+														item.disabled &&
+															'cursor-not-allowed opacity-80 hover:bg-transparent hover:text-muted-foreground'
+													)}
+												>
+													<span class="flex size-full items-center justify-center">
+														<!-- svelte-ignore svelte_component_deprecated -->
+														<svelte:component
+															this={getIcon(item.icon) || 'arrowRight'}
+															class="size-5"
+														/>
+													</span>
+												</a>
+											</Tooltip.Trigger>
+											<Tooltip.Content side="right">{item.title}</Tooltip.Content>
+										</Tooltip.Root>
+									{/if}
 								{/if}
 							{/each}
 						</section>
