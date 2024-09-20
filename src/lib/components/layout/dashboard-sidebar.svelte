@@ -88,7 +88,7 @@
 											{/if}
 										</a>
 									{:else}
-										<Tooltip.Root>
+										<Tooltip.Root openDelay={0}>
 											<Tooltip.Trigger>
 												<a
 													href={item.disabled ? '#' : item.href}
