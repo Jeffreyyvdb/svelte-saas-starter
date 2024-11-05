@@ -2,6 +2,7 @@
 	import '../app.css';
 	import { ModeWatcher } from 'mode-watcher';
 	import { Toaster } from '$lib/components/ui/sonner';
+	let { children } = $props();
 </script>
 
 <svelte:head>
@@ -11,6 +12,5 @@
 <Toaster></Toaster>
 <ModeWatcher></ModeWatcher>
 <div class="min-h-screen bg-background font-sans antialiased">
-	<slot></slot>
+	{@render children?.()}
 </div>
-
