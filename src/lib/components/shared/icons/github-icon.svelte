@@ -1,4 +1,9 @@
 <script lang="ts">
+	interface Props {
+		[key: string]: any;
+	}
+
+	let { ...props }: Props = $props();
 </script>
 
 <svg
@@ -9,7 +14,7 @@
 	role="img"
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 496 512"
-	{...$$props}
+	{...props}
 >
 	<path
 		fill="currentColor"

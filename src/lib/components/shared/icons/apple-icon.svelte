@@ -1,3 +1,11 @@
+<script lang="ts">
+	interface Props {
+		[key: string]: any;
+	}
+	
+	let { ...props }: Props = $props();
+</script>
+
 <svg
 	aria-hidden="true"
 	focusable="false"
@@ -6,7 +14,7 @@
 	role="img"
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 1024 1024"
-	{...$$props}
+	{...props}
 >
 	<path
 		fill="currentColor"
